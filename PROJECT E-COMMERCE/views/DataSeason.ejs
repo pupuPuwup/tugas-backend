@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <% include NavbarAdmin.ejs %><br><br>
+        <table border="1">
+            <tr>
+                <td style="font-weight:bold">Season Name</td>
+                <td style="font-weight:bold"></td>
+                <td style="font-weight:bold"></td>
+            </tr>
+            <% 
+            for (var i=0; i<data.length; i++)
+            {
+            %>
+            <tr>
+                <td><a href="/admincategory/<%= data[i].idSeason %>"><%= data[i].seasonName %></a></td>
+                <td><a href="/editseason/<%= data[i].idSeason %>">edit</a></td>
+                <td><a href="/deletedataseason/<%= data[i].idSeason %>">delete</a></td>
+            </tr>
+            <% 
+            }
+             %>
+        </table>
+        <br><br>
+        <p><a href="/inputseason">insert</a></p><br><br>
+        <a href="/adminindex">home</a>
+    </body>
+</html>

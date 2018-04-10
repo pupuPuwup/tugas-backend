@@ -1,0 +1,25 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p><a href="/login">Sign In</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <a href="/register">Sign Up</a></p>
+        <table border="1">
+            <tr>
+                <td style="font-weight:bold">Season Name</td>
+                <td style="font-weight:bold"></td>
+                <td style="font-weight:bold"></td>
+            </tr>
+            <% 
+            for (var i=0; i<data.length; i++)
+            {
+            %>
+            <tr>
+                <td><a href="/category/<%= data[i].idSeason %>"><%= data[i].seasonName %></a></td>
+            </tr>
+            <% 
+            }
+             %>
+        </table>
+    </body>
+</html>

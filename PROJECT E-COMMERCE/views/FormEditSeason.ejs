@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <% include NavbarAdmin.ejs %><br><br>
+        <form method="post" action="/formeditseason/<%= idSeason %>">
+            Season : <input type="text" name="seasonName" placeholder="Season">
+            <input type="Submit" value="Submit">
+        </form>
+        <a href="/adminindex">home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/adminseason">back</a>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <% include NavbarAdmin.ejs %><br><br><br>
+            <h2><%= seasonName %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= categoryName %></h2><br>
+        <table border="1">
+                <td style="font-weight:bold">Id Category</td>
+                <td style="font-weight:bold">Product Name</td>
+                <td style="font-weight:bold">Product Description</td>
+                <td style="font-weight:bold">Product Image</td>
+                <td style="font-weight:bold">Price</td>
+                <td style="font-weight:bold"></td>
+                <td style="font-weight:bold"></td>
+            </tr>
+            <% 
+            for (var i=0; i<data.length; i++)
+            {
+            %>
+            <tr>
+                <td><%= data[i].idCategory %></td>
+                <td><a href="/admincolor/<%= idSeason %>/<%= idCategory %>/<%= data[i].idProduct %>"><%= data[i].productName %></a></td>
+                <td><%= data[i].productDesc %></td>
+                <td><%= data[i].productImage %></td>
+                <td><%= data[i].price %></td>
+                <td><a href="/editproduct/<%= data[i].idCategory %>/<%= data[i].idProduct %>">edit</a></td>
+                <td><a href="/deletedataproduct/<%= data[i].idCategory %>/<%= data[i].idProduct %>">delete</a></td>
+            </tr>
+            <% 
+            }
+             %>
+        </table>
+        <br><br>
+        <p><a href="/inputproduct/<%= idSeason %>/<%= idCategory %>">insert</a></p><br><br>
+        <a href="/admincategory/<%= idSeason %>">back</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/adminindex">home</a>
+    </body>
+</html>

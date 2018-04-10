@@ -1,0 +1,15 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <% include NavbarAdmin.ejs %><br><br>
+        <form method="post" action="/forminputsize/<%= idSeason %>/<%= idCategory %>/<%= idProduct %>/<%= idColor %>">
+            Size : <input type="text" name="sizeName" placeholder="Size">
+            Stock : <input type="text" name="stock" placeholder="Stock">
+            <input type="Submit" value="Submit">
+        </form>
+        <a href="/adminindex">home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/adminsize/<%= idSeason %>/<%= idCategory %>/<%= idProduct %>/<%= idColor %>">back</a>
+    </body>
+</html>

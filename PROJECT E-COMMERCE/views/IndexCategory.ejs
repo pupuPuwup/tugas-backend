@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2><%= seasonName %></h2><br>
+        <table border="1">
+            <tr>
+                <td style="font-weight:bold">Category Name</td>
+            </tr>
+            <% 
+            for (var i=0; i<data.length; i++)
+            {
+            %>
+            <tr>
+                <td><a href="/product/<%= idSeason %>/<%= data[i].idCategory %>"><%= data[i].categoryName %></a></td>
+            </tr>
+            <% 
+            }
+             %>
+        </table>
+    </body>
+</html>

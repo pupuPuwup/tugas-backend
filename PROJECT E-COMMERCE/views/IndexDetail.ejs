@@ -1,0 +1,48 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2><%= seasonName %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= categoryName %>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= productName %></h2><br>
+        <%
+        for (var i=0; i<data2.length; i++)
+        {
+        %>
+        <h2>Image</h2>
+        <p>Description :</p>
+        <h3><%= data2[i].productDesc %></h3>
+        <br>
+        <p>Price : &nbsp;&nbsp;&nbsp;<%= data2[i].price %></p>
+        <%
+        }
+        %>
+        <br>
+        <%
+        for (var j=0; j<data3.length; j++)
+        {
+        %>
+        <p>Color : &nbsp;&nbsp;&nbsp;<a href="?color=<%= data3[j].idColor %>"><%= data3[j].colorName %></a></p>
+        <%
+        }
+        %>
+        <table border="1">
+            <tr>
+                <td style="font-weight:bold">Size Name</td>
+                <td style="font-weight:bold">Stock</td>
+            </tr>
+            <% 
+            for (var i=0; i<data4.length; i++)
+            {
+            %>
+            <tr>
+                <td><%= data4[i].sizeName %></td>
+                <td><%= data4[i].stock %></td>
+            </tr>
+            <% 
+            }
+             %>
+        </table>
+        <br>
+        <input class="btn btn-primary" type="Submit" value="Add to Chart">
+    </body>
+</html>
